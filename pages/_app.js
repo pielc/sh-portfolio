@@ -1,12 +1,12 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import "@fontsource/sora"
 
-const colors = {
-  brand: {
-    900: "#03ad5d",
-  },
-};
-
-const theme = extendTheme({ colors });
+const theme = extendTheme({
+  fonts: {
+    heading: "Sora, sans-serif",
+    body: "Sora, sans-serif" 
+  }
+});
 
 function App({ Component, pageProps }) {
   return (
