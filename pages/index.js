@@ -4,6 +4,7 @@ import { ShHeading } from "../components/typo";
 import { TypeEffect } from "../components/effects";
 
 import "@fontsource/jetbrains-mono";
+import { Skill } from "../components/visuals";
 
 const lorem = `
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie posuere facilisis.
@@ -26,12 +27,13 @@ export default function Home() {
         ~/plc
       </Heading>
 
-      <TypeEffect />
+      {/* <TypeEffect /> */}
+      
 
       <ShHeading>about</ShHeading>
       <Text>Hello it is me, plc !</Text>
       <ShHeading>skills</ShHeading>
-      <Text>{lorem}</Text>
+      <Skill/>
       <ShHeading>projects</ShHeading>
       <Text>{lorem}</Text>
       {/* <ShHeading>work day routine?</ShHeading> */}
