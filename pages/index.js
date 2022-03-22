@@ -23,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Heading fontSize="6em" color="rgb(3,173,93)" fontFamily="JetBrains Mono, sans-serif">
+      <Heading fontSize="5em" color="rgb(3,173,93)" fontFamily="JetBrains Mono, sans-serif">
         ~/plc
       </Heading>
 
@@ -36,11 +36,8 @@ export default function Home() {
       <Skill/>
       <ShHeading>projects</ShHeading>
       <Text>{lorem}</Text>
-      {/* <ShHeading>work day routine?</ShHeading> */}
       <ShHeading>contact</ShHeading>
       <Text>{lorem}</Text>
-      {/* timeline on other page ? */}
-      <ShHeading>timeline?</ShHeading>
     </div>
   );
 }
