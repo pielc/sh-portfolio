@@ -1,10 +1,9 @@
 import { Heading, Text } from "@chakra-ui/react";
+import "@fontsource/jetbrains-mono";
 import Head from "next/head";
 import { ShHeading } from "../components/typo";
-import { TypeEffect } from "../components/effects";
+import { Projects, Skills } from "../components/visuals";
 
-import "@fontsource/jetbrains-mono";
-import { Skill } from "../components/visuals";
 
 const lorem = `
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie posuere facilisis.
@@ -33,9 +32,9 @@ export default function Home() {
       <ShHeading>about</ShHeading>
       <Text>Hello it is me, plc !</Text>
       <ShHeading>skills</ShHeading>
-      <Skill/>
+      <Skills/>
       <ShHeading>projects</ShHeading>
-      <Text>{lorem}</Text>
+      <Projects/>
       <ShHeading>contact</ShHeading>
       <Text>{lorem}</Text>
     </div>
