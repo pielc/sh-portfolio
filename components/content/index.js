@@ -123,6 +123,8 @@ export const Contact = () => {
         />
         <Text>You can also browse my projects on github :</Text>
         <ShButton width="13" text="github" link="https://github.com/pielc" />
+        <Text>And look through my resume :</Text>
+        <ShButton width="13" text="resume" link="/files/resume_PierreLeChanu.pdf" />
       </Text>
     </ShBox>
   );
