@@ -14,8 +14,8 @@ export function ShBox({ title, children }) {
       <Grid
         marginBottom="1em"
         templateColumns="repeat(1, 1fr)"
-        minW="400px"
-        maxW="600px"
+        w="100%"
+        maxW="60em"
       >
         <GridItem>
           <Flex

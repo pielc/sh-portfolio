@@ -2,10 +2,6 @@ import {
   Box,
   Text,
   Image,
-  Grid,
-  GridItem,
-  Center,
-  Button,
 } from "@chakra-ui/react";
 
 import { ShBox, ShButton, lsLine, highlight } from "../visuals";
@@ -57,14 +53,17 @@ export const PortfolioProject = () => {
         <Text style={{ fontWeight: "bold" }} marginBottom="0.5em">
           plc@HOME:~/dev/projects/sh-portfolio$ vim README
         </Text>
+        <Box mx="2em" my="1em">
+          <Image src="icons/plc-logo.png" alt="WIP" boxSize="4em" />
+        </Box>
         <Text>
           {" "}
           This website is a {highlight("playground to learn and test")} Frontend
           development. <br />
           It has been built with : <br />
-          - Next.js <br />
-          - Chakra UI <br />
-          And deployed thanks to Vercel.com{" "}
+          {highlight("- Next.js")} <br />
+          {highlight("- Chakra UI")} <br />
+          And deployed thanks to Vercel{" "}
         </Text>
         <Text as="span"> You can find the source code on </Text>
         <Text
@@ -94,8 +93,8 @@ export const PluginProject = () => {
           # This project aims to develop a {highlight("VST plugin")} allowing to
           add reverb music effect on top of a MIDI instrument.
         </Text>
-        <Box m="2em">
-          <Image src="util/cone-BW.svg" alt="WIP" boxSize="4em" />
+        <Box mx="2em" my="1em">
+          <Image src="icons/cone-BW.svg" alt="WIP" boxSize="4em" />
         </Box>
         <Text>Work in progress ..</Text>
       </Text>
@@ -110,7 +109,7 @@ export const Contact = () => {
         <Text style={{ fontWeight: "bold" }} marginBottom="0.5em">
           plc@HOME:~/contact$ cat contact_list.txt
         </Text>
-        <Text>Please contact me for any question :</Text>
+        <Text>For any question, feel free to contact me :</Text>
         <ShButton
           width="13"
           text="email"
