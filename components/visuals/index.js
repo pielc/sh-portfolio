@@ -3,49 +3,60 @@ import {
   Circle,
   Grid,
   GridItem,
-  HStack,
+  Flex,
   Text,
-  VStack,
   Image,
+  Center,
 } from "@chakra-ui/react";
 
 export const ShBox = ({ children }) => {
   return (
-    <VStack marginBottom="1em" align="stretch"  spacing="0"> 
-      <Box
-        display="flex"
-        alignItems="center"
+    <Center>
+    <Grid marginBottom="1em" templateColumns="repeat(1, 1fr)" minW="400px" maxW="600px">
+      <GridItem>
+      <Flex
+        pl="4px"
+        pr="46px"
+        borderTopRadius="lg"
         h="1.3em"
         bgColor="#404040"
-        px="0.3em"
-        minW="450px"
-        maxW="650px"
-        borderTopRadius="lg"
       >
-        <HStack spacing="0.3em">
+        <Center w="14px">
           <Circle size="10px" bg="gray"></Circle>
+        </Center>
+        <Center w="14px">
           <Circle size="10px" bg="gray"></Circle>
+        </Center>
+        <Center w="14px">
           <Circle size="10px" bg="gray"></Circle>
-        </HStack>
-      </Box>
+        </Center>
+        <Center flex="1">
+          <Text color="#DDDDDD" fontSize="0.8em">
+            hello
+          </Text>
+        </Center>
+      </Flex>
+      </GridItem>
+
+      <GridItem>
       <Box
         bgColor="#ededed"
         borderWidth="1px"
         borderBottomRadius="lg"
         borderColor="#404040"
-        minW="450px"
-        maxW="650px"
-        // overflow="hidden"
+        p="2"
       >
-        <Box p="2">{children}</Box>
+        {children}
       </Box>
-    </VStack>
+      </GridItem>
+    </Grid>
+    </Center>
   );
 };
 
 function lsLine(perm, user, size, type, name, folder = false, title = false) {
   return (
-    <Grid w="440px" templateColumns="repeat(7, 1fr)">
+    <Grid w="390px" templateColumns="repeat(7, 1fr)">
       <GridItem w="80px" h="1.5em">
         <Text>{perm}</Text>
       </GridItem>
@@ -67,7 +78,7 @@ function lsLine(perm, user, size, type, name, folder = false, title = false) {
         )}{" "}
       </GridItem>
       <GridItem w="10px" h="1.5em"></GridItem>
-      <GridItem w="160px" h="1.5em">
+      <GridItem w="120px" h="1.5em">
         {" "}
         {folder ? (
           <Text style={{ fontWeight: "bold" }}>{name}</Text>
