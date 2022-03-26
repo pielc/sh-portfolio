@@ -35,10 +35,11 @@ export function ShBox({ title, children }) {
               <Circle size="10px" bg="gray"></Circle>
             </Center>
             <Center flex="1">
-              {title &&
-              <Text color="#DDDDDD" fontSize="0.8em">
-                {title}
-              </Text>}
+              {title && (
+                <Text color="#DDDDDD" fontSize="0.8em">
+                  {title}
+                </Text>
+              )}
             </Center>
           </Flex>
         </GridItem>
@@ -57,7 +58,7 @@ export function ShBox({ title, children }) {
       </Grid>
     </Center>
   );
-};
+}
 
 export function lsLine(
   perm,
@@ -103,9 +104,79 @@ export function lsLine(
   );
 }
 
+export function highlight(text) {
+  return (
+    <Text as="span" color="#03ad5d" style={{ fontWeight: "bold" }}>
+      {text}
+    </Text>
+  );
+}
+
 function chooseTypeColor(folder) {
   if (!folder) return "#03ad5d";
   return "#000000";
+}
+
+export const ShButton = ({ text, width, link, char = "x" }) => {
+  return (
+    <Grid
+      color="#03ad5d"
+      style={{ fontWeight: "bold" }}
+      as="a"
+      target="_blank"
+      href={link}
+      marginBottom="1em"
+      marginLeft="1em"
+      w={sizedW(8)}
+      templateColumns={sizedRepeat(width)}
+    >
+      {fullLine(width, char)}
+      {textLine(width, char, text)}
+      {fullLine(width, char)}
+    </Grid>
+  );
+};
+
+function sizedRepeat(size) {
+  return "repeat(" + size + ",1fr)";
+}
+
+function sizedW(size) {
+  return size + "ch";
+}
+
+function fullLine(width, char) {
+  var lines = [];
+  for (let i = 0; i < width; i++) {
+    lines.push(
+      <GridItem h="1em" w="1ch">
+        {char}
+      </GridItem>
+    );
+  }
+  return lines;
+}
+
+function textLine(width, char, text) {
+  var lines = [];
+  lines.push(
+    <GridItem h="1em" w="1ch">
+      {char}
+    </GridItem>
+  );
+  lines.push(
+    <GridItem h="1em" colSpan={width - 2}>
+      <Center>
+        <Text>{text}</Text>
+      </Center>
+    </GridItem>
+  );
+  lines.push(
+    <GridItem h="1em" w="1ch">
+      {char}
+    </GridItem>
+  );
+  return lines;
 }
 
 {

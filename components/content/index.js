@@ -1,16 +1,20 @@
-import { Box, Text, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Image,
+  Grid,
+  GridItem,
+  Center,
+  Button,
+} from "@chakra-ui/react";
 
-import { ShBox, lsLine } from "../visuals";
+import { ShBox, ShButton, lsLine, highlight } from "../visuals";
 
 export const Skills = () => {
   return (
     <ShBox>
-      <Text
-        // fontSize={{ base: "0.8em", md: "1em", xl: "1.2em" }} // TODO: Adapt other sizes to responsive
-        fontSize="0.8em"
-        fontFamily="JetBrains Mono, sans-serif"
-      >
-        <Box w="440px" h="1.5em">
+      <Text fontSize="0.8em" fontFamily="JetBrains Mono, sans-serif">
+        <Box w={{ base: "400px", xl: "550px" }} h="1.5em">
           <Text style={{ fontWeight: "bold" }} marginBottom="0.5em">
             plc@HOME:~/dev/projects/sh-portfolio$ ls -la
           </Text>
@@ -55,8 +59,8 @@ export const PortfolioProject = () => {
         </Text>
         <Text>
           {" "}
-          This website is a playground to learn and test Frontend development.{" "}
-          <br />
+          This website is a {highlight("playground to learn and test")} Frontend
+          development. <br />
           It has been built with : <br />
           - Next.js <br />
           - Chakra UI <br />
@@ -87,13 +91,38 @@ export const PluginProject = () => {
           plc@HOME:~/dev/projects/vst-plugin$ cat goal.md
         </Text>
         <Text>
-          # This project aims to develop a VST plugin allowing to add reverb
-          music effect on top of a MIDI instrument.
+          # This project aims to develop a {highlight("VST plugin")} allowing to
+          add reverb music effect on top of a MIDI instrument.
         </Text>
         <Box m="2em">
           <Image src="util/cone-BW.svg" alt="WIP" boxSize="4em" />
         </Box>
         <Text>Work in progress ..</Text>
+      </Text>
+    </ShBox>
+  );
+};
+
+export const Contact = () => {
+  return (
+    <ShBox>
+      <Text fontSize="0.8em" fontFamily="JetBrains Mono, sans-serif">
+        <Text style={{ fontWeight: "bold" }} marginBottom="0.5em">
+          plc@HOME:~/contact$ cat contact_list.txt
+        </Text>
+        <Text>Please contact me for any question :</Text>
+        <ShButton
+          width="13"
+          text="email"
+          link="mailto:pierre.le.chanu.pro@gmail.com"
+        />
+        <ShButton
+          width="13"
+          text="linkedin"
+          link="https://www.linkedin.com/in/pierrelc"
+        />
+        <Text>You can also browse my projects on github :</Text>
+        <ShButton width="13" text="github" link="https://github.com/pielc" />
       </Text>
     </ShBox>
   );
