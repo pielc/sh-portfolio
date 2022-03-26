@@ -1,19 +1,21 @@
 import {
-  Box, Circle,
+  Box,
+  Circle,
   Grid,
   GridItem,
-  HStack, Text, VStack,
-  Image
+  HStack,
+  Text,
+  VStack,
+  Image,
 } from "@chakra-ui/react";
 
 export const ShBox = ({ children }) => {
   return (
-    // <Box>
-    <VStack marginBottom="1em" align="stretch" spacing="0">
+    <VStack marginBottom="1em" align="stretch"  spacing="0"> 
       <Box
         display="flex"
         alignItems="center"
-        h="1em"
+        h="1.3em"
         bgColor="#404040"
         px="0.3em"
         minW="450px"
@@ -38,7 +40,6 @@ export const ShBox = ({ children }) => {
         <Box p="2">{children}</Box>
       </Box>
     </VStack>
-    // </Box>
   );
 };
 
@@ -60,22 +61,27 @@ function lsLine(perm, user, size, type, name, folder = false, title = false) {
         {title ? (
           <Text>{type}</Text>
         ) : (
-          <Text style={{ fontWeight: "bold" }}>{type}</Text>
+          <Text color={chooseTypeColor(folder)} style={{ fontWeight: "bold" }}>
+            {type}
+          </Text>
         )}{" "}
       </GridItem>
       <GridItem w="10px" h="1.5em"></GridItem>
       <GridItem w="160px" h="1.5em">
         {" "}
         {folder ? (
-          <Text color="#03ad5d" style={{ fontWeight: "bold" }}>
-            {name}
-          </Text>
+          <Text style={{ fontWeight: "bold" }}>{name}</Text>
         ) : (
           <Text>{name}</Text>
         )}{" "}
       </GridItem>
     </Grid>
   );
+}
+
+function chooseTypeColor(folder) {
+  if (!folder) return "#03ad5d";
+  return "#000000";
 }
 
 {
@@ -99,7 +105,7 @@ export const Skills = () => {
         fontFamily="JetBrains Mono, sans-serif"
       >
         <Box w="440px" h="1.5em">
-          <Text style={{ fontWeight: "bold" }}  marginBottom="0.5em">
+          <Text style={{ fontWeight: "bold" }} marginBottom="0.5em">
             plc@HOME:~/dev/projects/sh-portfolio$ ls -la
           </Text>
         </Box>
@@ -128,22 +134,23 @@ export const Skills = () => {
 export const Projects = () => {
   return (
     <div>
-      <PortfolioProject/>
-      <PluginProject/>
+      <PortfolioProject />
+      <PluginProject />
     </div>
-  )
-}
+  );
+};
 
 export const PortfolioProject = () => {
   return (
     <ShBox>
       <Text fontSize="0.8em" fontFamily="JetBrains Mono, sans-serif">
-        <Text style={{ fontWeight: "bold" }}  marginBottom="0.5em">
+        <Text style={{ fontWeight: "bold" }} marginBottom="0.5em">
           plc@HOME:~/dev/projects/sh-portfolio$ vim README
         </Text>
         <Text>
           {" "}
-          This website is a playground to learn and test Frontend development. <br />
+          This website is a playground to learn and test Frontend development.{" "}
+          <br />
           It has been built with : <br />
           - Next.js <br />
           - Chakra UI <br />
@@ -158,7 +165,7 @@ export const PortfolioProject = () => {
           github
         </Text>
         <Text>
-          ~ <br/> ~ <br/> ~ <br/> ~ <br/>
+          ~ <br /> ~ <br /> ~ <br /> ~ <br />
           &quot;README&quot; 5L, 194C
         </Text>
       </Text>
@@ -174,16 +181,14 @@ export const PluginProject = () => {
           plc@HOME:~/dev/projects/vst-plugin$ cat goal.md
         </Text>
         <Text>
-          # This project aims to develop a VST plugin allowing to add reverb music effect on top of a MIDI instrument.
+          # This project aims to develop a VST plugin allowing to add reverb
+          music effect on top of a MIDI instrument.
         </Text>
         <Box m="2em">
           <Image src="util/cone-BW.svg" alt="WIP" boxSize="4em" />
         </Box>
-        <Text>
-        Work in progress ..
-        </Text>
+        <Text>Work in progress ..</Text>
       </Text>
-        
     </ShBox>
   );
 };
