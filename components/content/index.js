@@ -1,8 +1,4 @@
-import {
-  Box,
-  Text,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Text, Image } from "@chakra-ui/react";
 
 import { ShBox, lsLine } from "../visuals";
 
@@ -52,7 +48,7 @@ export const Projects = () => {
 
 export const PortfolioProject = () => {
   return (
-    <ShBox>
+    <ShBox title="website project">
       <Text fontSize="0.8em" fontFamily="JetBrains Mono, sans-serif">
         <Text style={{ fontWeight: "bold" }} marginBottom="0.5em">
           plc@HOME:~/dev/projects/sh-portfolio$ vim README
@@ -85,7 +81,7 @@ export const PortfolioProject = () => {
 
 export const PluginProject = () => {
   return (
-    <ShBox>
+    <ShBox title="music plugin project">
       <Text fontSize="0.8em" fontFamily="JetBrains Mono, sans-serif">
         <Text style={{ fontWeight: "bold" }} marginBottom="0.5em">
           plc@HOME:~/dev/projects/vst-plugin$ cat goal.md

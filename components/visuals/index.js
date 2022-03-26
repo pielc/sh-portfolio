@@ -8,52 +8,66 @@ import {
   Center,
 } from "@chakra-ui/react";
 
-export const ShBox = ({ children }) => {
+export function ShBox({ title, children }) {
   return (
     <Center>
-    <Grid marginBottom="1em" templateColumns="repeat(1, 1fr)" minW="400px" maxW="600px">
-      <GridItem>
-      <Flex
-        pl="4px"
-        pr="46px"
-        borderTopRadius="lg"
-        h="1.3em"
-        bgColor="#404040"
+      <Grid
+        marginBottom="1em"
+        templateColumns="repeat(1, 1fr)"
+        minW="400px"
+        maxW="600px"
       >
-        <Center w="14px">
-          <Circle size="10px" bg="gray"></Circle>
-        </Center>
-        <Center w="14px">
-          <Circle size="10px" bg="gray"></Circle>
-        </Center>
-        <Center w="14px">
-          <Circle size="10px" bg="gray"></Circle>
-        </Center>
-        <Center flex="1">
-          <Text color="#DDDDDD" fontSize="0.8em">
-            hello
-          </Text>
-        </Center>
-      </Flex>
-      </GridItem>
+        <GridItem>
+          <Flex
+            pl="4px"
+            pr="46px"
+            borderTopRadius="lg"
+            h="1.3em"
+            bgColor="#404040"
+          >
+            <Center w="14px">
+              <Circle size="10px" bg="gray"></Circle>
+            </Center>
+            <Center w="14px">
+              <Circle size="10px" bg="gray"></Circle>
+            </Center>
+            <Center w="14px">
+              <Circle size="10px" bg="gray"></Circle>
+            </Center>
+            <Center flex="1">
+              {title &&
+              <Text color="#DDDDDD" fontSize="0.8em">
+                {title}
+              </Text>}
+            </Center>
+          </Flex>
+        </GridItem>
 
-      <GridItem>
-      <Box
-        bgColor="#ededed"
-        borderWidth="1px"
-        borderBottomRadius="lg"
-        borderColor="#404040"
-        p="2"
-      >
-        {children}
-      </Box>
-      </GridItem>
-    </Grid>
+        <GridItem>
+          <Box
+            bgColor="#ededed"
+            borderWidth="1px"
+            borderBottomRadius="lg"
+            borderColor="#404040"
+            p="2"
+          >
+            {children}
+          </Box>
+        </GridItem>
+      </Grid>
     </Center>
   );
 };
 
-export function lsLine(perm, user, size, type, name, folder = false, title = false) {
+export function lsLine(
+  perm,
+  user,
+  size,
+  type,
+  name,
+  folder = false,
+  title = false
+) {
   return (
     <Grid w="390px" templateColumns="repeat(7, 1fr)">
       <GridItem w="80px" h="1.5em">
@@ -105,4 +119,3 @@ function chooseTypeColor(folder) {
   <GridItem bgColor="orange"  w="160px" h="1.5em"><Text>hello_world.cpp</Text></GridItem>
 </Grid> */
 }
-
