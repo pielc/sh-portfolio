@@ -2,7 +2,7 @@ import { Heading, Text } from "@chakra-ui/react";
 import "@fontsource/jetbrains-mono";
 import Head from "next/head";
 import { ShHeading } from "../components/typo";
-import { Projects, Skills } from "../components/visuals";
+import { Projects, Skills } from "../components/content";
 
 
 const lorem = `
