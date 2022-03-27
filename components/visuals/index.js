@@ -149,7 +149,7 @@ function fullLine(width, char) {
   var lines = [];
   for (let i = 0; i < width; i++) {
     lines.push(
-      <GridItem h="1em" w="1ch">
+      <GridItem key={i+"-char-grid"} h="1em" w="1ch">
         {char}
       </GridItem>
     );
@@ -160,19 +160,19 @@ function fullLine(width, char) {
 function textLine(width, char, text) {
   var lines = [];
   lines.push(
-    <GridItem h="1em" w="1ch">
+    <GridItem key="firstchar-grid" h="1em" w="1ch">
       {char}
     </GridItem>
   );
   lines.push(
-    <GridItem h="1em" colSpan={width - 2}>
+    <GridItem key="text-grid" h="1em" colSpan={width - 2}>
       <Center>
         <Text>{text}</Text>
       </Center>
     </GridItem>
   );
   lines.push(
-    <GridItem h="1em" w="1ch">
+    <GridItem key="lastchar-grid" h="1em" w="1ch">
       {char}
     </GridItem>
   );
