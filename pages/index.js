@@ -3,6 +3,7 @@ import "@fontsource/jetbrains-mono";
 import Head from "next/head";
 import { ShHeading } from "../components/typo";
 import { Contact, Projects, Skills } from "../components/content";
+import { TypeWriterTitle } from "../components/effects";
 
 const lorem = `
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie posuere facilisis.
@@ -29,7 +30,7 @@ export default function Home() {
         ~/plc
       </Heading>
 
-      {/* <TypeEffect /> */}
+      <TypeWriterTitle />
 
       <ShHeading>about</ShHeading>
       <Text>Hello it is me, plc !</Text>

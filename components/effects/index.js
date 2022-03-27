@@ -1,23 +1,29 @@
 import Typewriter from "typewriter-effect";
-import { Stack } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 
-export const TypeEffect = () => {
+export const TypeWriterTitle = () => {
   return (
-    <Stack>
+    <Heading
+        fontSize="4em"
+        color="rgb(3,173,93)"
+        fontFamily="JetBrains Mono, sans-serif"
+      >
     <Typewriter
       options={{
         cursor: "_",
         autoStart: true,
-        loop: true
+        deleteSpeed: 25
+        // loop: true
       }}
       onInit={(typewriter) => {
         typewriter
-          .typeString("Hello World!")
+          .typeString("~/pierre.le.chanu")
           .pauseFor(2500)
-          .deleteAll()
+          .deleteChars(15)
+          .typeString("plc")
           .start();
       }}
     />
-    </Stack>
+    </Heading>
   );
 };
