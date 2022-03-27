@@ -117,7 +117,7 @@ function chooseTypeColor(folder) {
   return "#000000";
 }
 
-export const ShButton = ({ text, width, link, char = "x" }) => {
+export const ShButton = ({ text, width, link, char = "-" }) => {
   return (
     <Grid
       color="#03ad5d"
@@ -149,7 +149,7 @@ function fullLine(width, char) {
   var lines = [];
   for (let i = 0; i < width; i++) {
     lines.push(
-      <GridItem key={i+"-char-grid"} h="1em" w="1ch">
+      <GridItem key={i + "-char-grid"} h="1em" w="1ch">
         {char}
       </GridItem>
     );
@@ -161,7 +161,7 @@ function textLine(width, char, text) {
   var lines = [];
   lines.push(
     <GridItem key="firstchar-grid" h="1em" w="1ch">
-      {char}
+      |
     </GridItem>
   );
   lines.push(
@@ -173,7 +173,7 @@ function textLine(width, char, text) {
   );
   lines.push(
     <GridItem key="lastchar-grid" h="1em" w="1ch">
-      {char}
+      |
     </GridItem>
   );
   return lines;

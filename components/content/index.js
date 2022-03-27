@@ -1,10 +1,5 @@
-import {
-  Box,
-  Text,
-  Image,
-} from "@chakra-ui/react";
-
-import { ShBox, ShButton, lsLine, highlight } from "../visuals";
+import { Box, Center, Circle, Image, Stack, Text } from "@chakra-ui/react";
+import { highlight, lsLine, ShBox, ShButton } from "../visuals";
 
 export const Skills = () => {
   return (
@@ -123,8 +118,46 @@ export const Contact = () => {
         <Text>You can also browse my projects on github :</Text>
         <ShButton width="13" text="github" link="https://github.com/pielc" />
         <Text>And look through my resume :</Text>
-        <ShButton width="13" text="resume" link="/files/resume_PierreLeChanu.pdf" />
+        <ShButton
+          width="13"
+          text="resume"
+          link="/files/resume_PierreLeChanu.pdf"
+        />
       </Text>
     </ShBox>
+  );
+};
+
+export const About = () => {
+  return (
+    <Center py="1em">
+      <Box maxW="80em">
+        <Stack direction={{ base: "column", xl: "row" }} spacing="0">
+          <ProfilePicture />
+          <Box alignSelf="center">
+            <Text
+              p="0.8em"
+              maxW={{ base: "100%", xl: "30em" }}
+              justifyContent="center"
+              fontSize="1.2em"
+            >
+              Hello ! I&apos;m {highlight("Pierre")} <br />a{" "}
+              {highlight("Software engineer")} driven by curiosity and I mostly
+              work on {highlight("backend development")}.
+            </Text>
+          </Box>
+        </Stack>
+      </Box>
+    </Center>
+  );
+};
+
+export const ProfilePicture = () => {
+  return (
+    <Center>
+      <Circle bgColor="#404040" size="13em">
+        <Image src="pictures/pp.png" alt="plc" boxSize="12em" />
+      </Circle>
+    </Center>
   );
 };

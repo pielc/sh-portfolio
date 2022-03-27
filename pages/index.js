@@ -1,8 +1,7 @@
-import { Heading, Text } from "@chakra-ui/react";
 import "@fontsource/jetbrains-mono";
 import Head from "next/head";
 import { ShHeading } from "../components/typo";
-import { Contact, Projects, Skills } from "../components/content";
+import { Contact, Projects, Skills, About } from "../components/content";
 import { TypeWriterTitle } from "../components/effects";
 
 const lorem = `
@@ -22,18 +21,18 @@ export default function Home() {
         <link rel="icon" href="/icons/plc-logo.png" />
       </Head>
 
-      <Heading
+      {/* <Heading
         fontSize="5em"
         color="rgb(3,173,93)"
         fontFamily="JetBrains Mono, sans-serif"
       >
         ~/plc
-      </Heading>
+      </Heading> */}
 
       <TypeWriterTitle />
 
-      <ShHeading>about</ShHeading>
-      <Text>Hello it is me, plc !</Text>
+      {/* <ShHeading>about</ShHeading> */}
+      <About />
       <ShHeading>skills</ShHeading>
       <Skills />
       <ShHeading>projects</ShHeading>
