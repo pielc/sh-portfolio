@@ -70,18 +70,18 @@ export function lsLine(
   title = false
 ) {
   return (
-    <Grid w="390px" templateColumns="repeat(7, 1fr)">
-      <GridItem w="80px" h="1.5em">
+    <Grid w="41ch" justifyItems="start" templateColumns="repeat(7, 1fr)">
+      <GridItem w="10ch" h="1.5em">
         <Text>{perm}</Text>
       </GridItem>
-      <GridItem w="85px" h="1.5em">
+      <GridItem display={{ base:"none", xl:"block"}} w="11ch" h="1.5em">
         <Text align="end">{user}</Text>
       </GridItem>
-      <GridItem w="45px" h="1.5em">
+      <GridItem w="6ch" h="1.5em">
         <Text align="end">{size}</Text>
       </GridItem>
-      <GridItem w="10px" h="1.5em"></GridItem>
-      <GridItem w="50px" h="1.5em">
+      <GridItem w="2ch" h="1.5em"></GridItem>
+      <GridItem w="7ch" h="1.5em">
         {" "}
         {title ? (
           <Text>{type}</Text>
@@ -91,8 +91,8 @@ export function lsLine(
           </Text>
         )}{" "}
       </GridItem>
-      <GridItem w="10px" h="1.5em"></GridItem>
-      <GridItem w="120px" h="1.5em">
+      <GridItem w="1ch" h="1.5em"></GridItem>
+      <GridItem w="16ch" h="1.5em">
         {" "}
         {folder ? (
           <Text style={{ fontWeight: "bold" }}>{name}</Text>
@@ -177,16 +177,4 @@ function textLine(width, char, text) {
     </GridItem>
   );
   return lines;
-}
-
-{
-  /* <Grid w="470px"  bgColor="gray"  templateColumns='repeat(7, 1fr)'>
-  <GridItem bgColor="red" w="80px" h="1.5em"><Text>drwxr-xr-x</Text></GridItem>
-  <GridItem bgColor="green" w="85px" h="1.5em"><Text align="end">5 plc plc</Text></GridItem>
-  <GridItem bgColor="pink"  w="45px" h="1.5em"><Text align="end">4.0K</Text></GridItem>
-  <GridItem bgColor="purple"  w="10px" h="1.5em"></GridItem>
-  <GridItem bgColor="blue"  w="80px" h="1.5em"><Text>Kubernetes</Text></GridItem>
-  <GridItem bgColor="purple"  w="10px" h="1.5em"></GridItem>
-  <GridItem bgColor="orange"  w="160px" h="1.5em"><Text>hello_world.cpp</Text></GridItem>
-</Grid> */
 }

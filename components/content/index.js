@@ -5,11 +5,9 @@ export const Skills = () => {
   return (
     <ShBox>
       <Text fontSize="0.8em" fontFamily="JetBrains Mono, sans-serif">
-        <Box w={{ base: "400px", xl: "550px" }} h="1.5em">
-          <Text style={{ fontWeight: "bold" }} marginBottom="0.5em">
+          <Text h="1.5em" style={{ fontWeight: "bold" }} marginBottom="0.5em">
             plc@HOME:~/dev/projects/sh-portfolio$ ls -la
           </Text>
-        </Box>
         {lsLine("permission", "user", "size", "type", "name", false, true)}
         {lsLine("drwxr-xr-x", "7 plc plc", "121K", ".", "COMMON_USE", true)}
         {lsLine("-rw-r--r--", "1 plc plc", "1.2K", "C++", "hello_world.cpp")}
