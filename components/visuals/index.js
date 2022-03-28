@@ -74,7 +74,7 @@ export function lsLine(
       <GridItem w="10ch" h="1.5em">
         <Text>{perm}</Text>
       </GridItem>
-      <GridItem display={{ base:"none", xl:"block"}} w="11ch" h="1.5em">
+      <GridItem display={{ base: "none", xl: "block" }} w="11ch" h="1.5em">
         <Text align="end">{user}</Text>
       </GridItem>
       <GridItem w="6ch" h="1.5em">

@@ -7,16 +7,16 @@ const theme = extendTheme({
     body: "Sora, sans-serif",
   },
   colors: {
-    shgreen:{
-      500: "#03ad5d"
+    shgreen: {
+      500: "#03ad5d",
     },
-    shgrey:{
+    shgrey: {
       200: "#ededed",
       300: "#DDDDDD",
       700: "#808080",
-      900: "#404040"
-    }
-  }
+      900: "#404040",
+    },
+  },
 });
 
 function App({ Component, pageProps }) {
