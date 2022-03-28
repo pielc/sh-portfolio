@@ -22,7 +22,7 @@ const theme = extendTheme({
 function App({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      <Box px={{ base: "0.5em", lg: "15em" }}>
+      <Box px={{ base: "0em", lg: "15em" }}>
         <Component {...pageProps} />
       </Box>
     </ChakraProvider>

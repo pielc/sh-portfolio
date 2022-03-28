@@ -9,6 +9,7 @@ export const TypeWriterTitle = () => {
       fontFamily="JetBrains Mono, sans-serif"
       marginTop="0.5em"
       marginBottom="0.5em"
+      onClick={() => {reloadHeader()}}
     >
       <Typewriter
         options={{
@@ -29,3 +30,7 @@ export const TypeWriterTitle = () => {
     </Heading>
   );
 };
+
+function reloadHeader() {
+  window.location.reload();
+}
