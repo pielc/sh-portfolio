@@ -4,14 +4,6 @@ import { ShHeading } from "../components/typo";
 import { Contact, Projects, Skills, About } from "../components/content";
 import { TypeWriterTitle } from "../components/effects";
 
-const lorem = `
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie posuere facilisis.
-  Sed erat nulla, volutpat quis mollis vel, facilisis vitae sem. Pellentesque ac turpis eget mi elementum vestibulum vel at felis.
-  Nunc molestie eleifend imperdiet. Aliquam erat volutpat. Sed sollicitudin tempus risus at rhoncus. Aenean rutrum mollis ipsum.
-  Proin fermentum vulputate risus, at posuere turpis rhoncus et. In vulputate ex sit amet velit pellentesque sodales.
-  Sed blandit massa nec tincidunt dignissim.
-  `;
-
 export default function Home() {
   return (
     <div style={{ padding: "0 2rem" }}>
@@ -21,17 +13,8 @@ export default function Home() {
         <link rel="icon" href="/icons/plc-logo.png" />
       </Head>
 
-      {/* <Heading
-        fontSize="5em"
-        color="rgb(3,173,93)"
-        fontFamily="JetBrains Mono, sans-serif"
-      >
-        ~/plc
-      </Heading> */}
-
       <TypeWriterTitle />
-
-      {/* <ShHeading>about</ShHeading> */}
+      
       <About />
       <ShHeading>skills</ShHeading>
       <Skills />

@@ -23,7 +23,7 @@ export function ShBox({ title, children }) {
             pr="46px"
             borderTopRadius="lg"
             h="1.3em"
-            bgColor="#404040"
+            bgColor="shgrey.900"
           >
             <Center w="14px">
               <Circle size="10px" bg="gray"></Circle>
@@ -36,7 +36,7 @@ export function ShBox({ title, children }) {
             </Center>
             <Center flex="1">
               {title && (
-                <Text color="#DDDDDD" fontSize="0.8em">
+                <Text color="shgrey.300" fontSize="0.8em">
                   {title}
                 </Text>
               )}
@@ -46,10 +46,10 @@ export function ShBox({ title, children }) {
 
         <GridItem>
           <Box
-            bgColor="#ededed"
+            bgColor="shgrey.200"
             borderWidth="1px"
             borderBottomRadius="lg"
-            borderColor="#404040"
+            borderColor="shgrey.900"
             p="2"
           >
             {children}
@@ -106,21 +106,21 @@ export function lsLine(
 
 export function highlight(text) {
   return (
-    <Text as="span" color="#03ad5d" style={{ fontWeight: "bold" }}>
+    <Text as="span" color="shgreen.500" style={{ fontWeight: "bold" }}>
       {text}
     </Text>
   );
 }
 
 function chooseTypeColor(folder) {
-  if (!folder) return "#03ad5d";
+  if (!folder) return "shgreen.500";
   return "#000000";
 }
 
 export const ShButton = ({ text, width, link, char = "-" }) => {
   return (
     <Grid
-      color="#03ad5d"
+      color="shgreen.500"
       style={{ fontWeight: "bold" }}
       as="a"
       target="_blank"

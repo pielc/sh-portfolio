@@ -153,7 +153,7 @@ export const About = () => {
 export const ProfilePicture = () => {
   return (
     <Center>
-      <Circle bgColor="#404040" size="13em">
+      <Circle bgColor="shgrey.900" size="13em">
         <Image src="pictures/pp.png" alt="plc" boxSize="12em" />
       </Circle>
     </Center>

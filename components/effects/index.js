@@ -5,7 +5,7 @@ export const TypeWriterTitle = () => {
   return (
     <Heading
       fontSize="4em"
-      color="rgb(3,173,93)"
+      color="shgreen.500"
       fontFamily="JetBrains Mono, sans-serif"
       marginTop="0.5em"
       marginBottom="0.5em"
