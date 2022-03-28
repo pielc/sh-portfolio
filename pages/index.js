@@ -1,8 +1,9 @@
 import "@fontsource/jetbrains-mono";
 import Head from "next/head";
 import { ShHeading } from "../components/typo";
-import { Contact, Projects, Skills, About } from "../components/content";
+import { Contact, Projects, Skills, About, Footer } from "../components/content";
 import { TypeWriterTitle } from "../components/effects";
+import { Box } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Projects />
       <ShHeading>contact</ShHeading>
       <Contact />
+      <Footer />
     </div>
   );
 }

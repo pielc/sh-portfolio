@@ -159,3 +159,10 @@ export const ProfilePicture = () => {
     </Center>
   );
 };
+
+
+export const Footer = () => {
+  return (
+    <Box marginBottom="5em" />
+  )
+}
