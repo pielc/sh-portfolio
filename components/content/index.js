@@ -106,7 +106,7 @@ export const Contact = () => {
         <ShButton
           width="13"
           text="email"
-          link="mailto:pierre.le.chanu.pro@gmail.com"
+          link="mailto:pierre@lechanu.com"
         />
         <ShButton
           width="13"
